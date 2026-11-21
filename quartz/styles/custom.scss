@@ -1,0 +1,31 @@
+/* El Completo - estilo complementario para Quartz 5 */
+:root {
+  --completo-crema: #fff8e9;
+  --completo-palta: #487c2c;
+  --completo-tomate: #bf402b;
+  --completo-carbon: #292421;
+}
+body { line-height: 1.65; }
+article { max-width: 850px; }
+article > h1 { letter-spacing: -.025em; }
+article img[src*="Logo"], article img[alt*="El Completo - Logo"] {
+  width: min(100%, 880px); display: block; margin: 0 auto 2.1rem;
+  border: none; border-radius: 18px; box-shadow: 0 12px 36px rgba(40,32,20,.07);
+}
+article blockquote { border-inline-start: 4px solid var(--completo-palta); border-radius: 0 12px 12px 0; }
+article table { border-collapse: separate; border-spacing: 8px; width: 100%; }
+article table th, article table td {
+  background: rgba(151, 170, 77, .055);
+  border: 1px solid var(--lightgray);
+  border-radius: 10px;
+  padding: .8rem; vertical-align: top;
+}
+article table a { font-weight: 700; }
+article h2 { margin-top: 2rem; }
+article h2::before { content: ""; display: inline-block; width: .23rem; height: 1.15rem; background: var(--completo-tomate); margin-right: .55rem; border-radius: .2rem; vertical-align: -.13rem; }
+article input[type="checkbox"] { accent-color: var(--completo-palta); }
+@media(max-width:650px) {
+  article table { border-spacing: 3px; font-size: .88rem; }
+  article table td, article table th { padding: .45rem; }
+  article img[src*="Logo"] { border-radius: 10px; margin-bottom: 1rem; }
+}
