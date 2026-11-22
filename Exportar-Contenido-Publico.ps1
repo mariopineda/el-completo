@@ -1,4 +1,4 @@
-﻿param(
+param(
     [Parameter(Mandatory=$true)][string]$VaultPath,
     [Parameter(Mandatory=$true)][string]$RepoPath
 )
@@ -42,7 +42,6 @@ try {
     $byCategory = @{}
     $tryRecipes = New-Object System.Collections.Generic.List[string]
     $favRecipes = New-Object System.Collections.Generic.List[string]
-    $photoRecipes = New-Object System.Collections.Generic.List[string]
     foreach ($note in $recipes) {
         $rel = $note.FullName.Substring($VaultPath.Length).TrimStart([char[]]@('\','/'))
         $category = Split-Path -Leaf (Split-Path -Parent $note.FullName)
@@ -97,7 +96,6 @@ try {
         Save-Text (Join-Path $stage $rel) $raw
         if ($raw -match '(?m)^estado:\s*por-probar\s*$') { $tryRecipes.Add($link) }
         if ($raw -match '(?m)^favorita:\s*true\s*$') { $favRecipes.Add($link) }
-        if ($raw -match '(?m)^foto_pendiente:\s*true\s*$') { $photoRecipes.Add($link) }
     }
 
     # The category pages always list the actual available recipes.
@@ -120,15 +118,14 @@ try {
     }
 
     $lists = @(
-        @{ Name='Por probar'; Title='Por probar'; Intro='Recetas que todavía estamos probando y mejorando.'; Values=$tryRecipes.ToArray() },
         @{ Name='Favoritas'; Title='Favoritas'; Intro='Nuestras favoritas de la casa.'; Values=$favRecipes.ToArray() },
-        @{ Name='Recetas por fotografiar'; Title='Recetas por fotografiar'; Intro='Recetas que necesitan una fotografía propia.'; Values=$photoRecipes.ToArray() }
+        @{ Name='Por probar'; Title='Por probar'; Intro='Recetas que todavía estamos probando y mejorando.'; Values=$tryRecipes.ToArray() }
     )
     foreach ($item in $lists) {
         $values = @($item.Values | Sort-Object)
         if ($values.Count -eq 0) { $values = @('_Todavía no hay recetas en esta colección._') }
         $page = "---`ntitle: `"$($item.Title)`"`ndraft: false`n---`n`n# $($item.Title)`n`n$($item.Intro)`n`n" + ($values -join "`n") + "`n"
-        Save-Text (Join-Path $stage "02 - Colecciones\$($item.Name).md") $page
+        Save-Text (Join-Path $stage "$($item.Name).md") $page
     }
 
     # Correct the homepage's previous statement that recipes are not published.

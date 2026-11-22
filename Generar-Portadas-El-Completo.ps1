@@ -1,4 +1,4 @@
-﻿#requires -Version 5.1
+#requires -Version 5.1
 param(
     [Parameter(Mandatory=$true)][string]$ContentPath
 )
@@ -6,7 +6,7 @@ $ErrorActionPreference = 'Stop'
 $utf8 = New-Object System.Text.UTF8Encoding($false)
 $ContentPath = (Resolve-Path -LiteralPath $ContentPath).Path
 $recipesRoot = Join-Path $ContentPath '01 - Recetas'
-$collectionRoot = Join-Path $ContentPath '02 - Colecciones'
+$collectionRoot = $ContentPath
 $resourcesRoot = Join-Path $ContentPath '03 - Recursos'
 $logo = Join-Path $resourcesRoot 'Identidad visual\El Completo - Logo.png'
 
@@ -30,7 +30,7 @@ foreach ($name in $categories) {
         throw "Galería incompleta o incompatible: $name"
     }
 }
-foreach ($name in @('Favoritas', 'Por probar', 'Recetas por fotografiar')) {
+foreach ($name in @('Favoritas', 'Por probar')) {
     if (-not (Test-Path -LiteralPath (Join-Path $collectionRoot ($name + '.md')) -PathType Leaf)) {
         throw "Falta colección publicada: $name"
     }
@@ -59,7 +59,8 @@ draft: false
 ![[El Completo - Logo.png]]
 
 - [[01 - Recetas/index|🍲 Recetas]]
-- [[02 - Colecciones/index|❤️ Colecciones]]
+- [[Favoritas|❤️ Favoritas]]
+- [[Por probar|🍽️ Por probar]]
 '@
 Save-Markdown (Join-Path $ContentPath 'index.md') $homepageMarkdown
 
@@ -88,26 +89,8 @@ Elige una categoría.
 '@
 Save-Markdown (Join-Path $recipesRoot 'index.md') $recipesIntro
 
-$collectionsIntro = @'
----
-title: "Colecciones"
-draft: false
-cssclasses:
-  - el-completo-portal
----
-
-# Colecciones
-
-Recetas agrupadas para encontrarlas más fácilmente.
-
-- [[02 - Colecciones/Favoritas|❤️ Favoritas]]
-- [[02 - Colecciones/Por probar|🍽️ Por probar]]
-- [[02 - Colecciones/Recetas por fotografiar|📷 Por fotografiar]]
-
-[Volver al inicio](/el-completo/)
-'@
-Save-Markdown (Join-Path $collectionRoot 'index.md') $collectionsIntro
 
 
 
-Write-Host 'Portada minimalista: 2 accesos, 8 categorías y 3 colecciones.' -ForegroundColor Green
+
+Write-Host 'Portada minimalista: 3 accesos, 8 categorías y 2 listas.' -ForegroundColor Green
