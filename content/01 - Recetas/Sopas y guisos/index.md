@@ -12,7 +12,7 @@ Preparaciones de cuchara para entrar en calor.
 ## Recetas ilustradas (16)
 
 - ![[sopa-sueca-de-puerros-y-papas-ilustracion.webp]]  
-  [[Sopa sueca de puerros y papas]] · **por-probar**
+  [[Sopa sueca de puerros y papas]] <span class="el-completo-estados" title="Por probar" aria-label="Por probar">🧪</span>
 
 - ![[borsch-vegano-de-betarraga-ilustracion.webp]]  
   [[Borsch vegano de betarraga]] <span class="el-completo-estados" title="Por probar; Datos pendientes de revisión" aria-label="Por probar; Datos pendientes de revisión">🧪 ⚠️</span>
