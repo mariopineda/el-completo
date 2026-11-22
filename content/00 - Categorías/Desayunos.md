@@ -1,15 +1,19 @@
 ---
 title: "Desayunos"
-description: "Para empezar el día con algo rico y buena energía."
-tags: []
 draft: false
 ---
 
-# 🍳 Desayunos
+# Desayunos
 
-Para empezar el día con algo rico y buena energía.
+Para comenzar el día con ganas.
 
-> [!info] Nuestra colección está creciendo
-> Publicaremos aquí las recetas de esta categoría cuando hayamos revisado sus instrucciones, cantidades y fotografías.
+## Recetas (3)
 
-[[index|← Volver a la portada]]
+- [[Avena remojada de la noche anterior]]
+- [[Avena remojada estilo Buff Dudes — apunte]]
+- [[Avena remojada vegana — apunte]]
+
+> [!warning] Revisión pendiente
+> Algunas recetas conservan avisos de importación. Lee los avisos antes de cocinarlas.
+
+[[index|Volver a la portada]]

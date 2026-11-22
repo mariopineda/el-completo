@@ -1,15 +1,23 @@
 ---
 title: "Ensaladas y acompañamientos"
-description: "Para acompañar, refrescar y darle color a la mesa."
-tags: []
 draft: false
 ---
 
-# 🥗 Ensaladas y acompañamientos
+# Ensaladas y acompañamientos
 
-Para acompañar, refrescar y darle color a la mesa.
+Verduras, ensaladas y cosas para acompañar.
 
-> [!info] Nuestra colección está creciendo
-> Publicaremos aquí las recetas de esta categoría cuando hayamos revisado sus instrucciones, cantidades y fotografías.
+## Recetas (7)
 
-[[index|← Volver a la portada]]
+- [[Chucrut casero fermentado]]
+- [[Ensalada de kale y quinoa]]
+- [[Ensalada de lentejas con verduras asadas]]
+- [[Ensalada de papas con palta y eneldo]]
+- [[Ensalada de quinoa con verduras al comino]]
+- [[Ensalada de quinoa, choclo y palta]]
+- [[Ensalada mediterránea de lentejas]]
+
+> [!warning] Revisión pendiente
+> Algunas recetas conservan avisos de importación. Lee los avisos antes de cocinarlas.
+
+[[index|Volver a la portada]]

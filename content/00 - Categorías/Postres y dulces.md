@@ -1,15 +1,17 @@
 ---
 title: "Postres y dulces"
-description: "Un gustito al final de la comida nunca está de más."
-tags: []
 draft: false
 ---
 
-# 🍰 Postres y dulces
+# Postres y dulces
 
-Un gustito al final de la comida nunca está de más.
+Un gustito para cerrar la comida.
 
-> [!info] Nuestra colección está creciendo
-> Publicaremos aquí las recetas de esta categoría cuando hayamos revisado sus instrucciones, cantidades y fotografías.
+## Recetas (1)
 
-[[index|← Volver a la portada]]
+- [[Quequitos de plátano]]
+
+> [!warning] Revisión pendiente
+> Algunas recetas conservan avisos de importación. Lee los avisos antes de cocinarlas.
+
+[[index|Volver a la portada]]

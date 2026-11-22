@@ -26,6 +26,28 @@ jobs:
         run: npx quartz plugin install
       - name: Generar el sitio
         run: npx quartz build
+      - name: Evitar indexacion en buscadores
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          site = Path('public')
+          pages = list(site.rglob('*.html'))
+          if not pages:
+              raise SystemExit('ERROR: Quartz no genero archivos HTML')
+          robots = '<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">'
+          for page in pages:
+              html = page.read_text(encoding='utf-8')
+              if '</head>' not in html:
+                  raise SystemExit(f'ERROR: falta head en {page}')
+              if robots not in html:
+                  html = html.replace('</head>', robots + '\n</head>', 1)
+              page.write_text(html, encoding='utf-8')
+          for name in ('sitemap.xml', 'index.xml', 'rss.xml', 'feed.xml'):
+              for item in site.rglob(name):
+                  item.unlink()
+          assert all(robots in p.read_text(encoding='utf-8') for p in pages)
+          print(f'NOINDEX aplicado a {len(pages)} paginas')
+          PY
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public

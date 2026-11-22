@@ -1,17 +1,59 @@
 ---
 title: "Recetas por fotografiar"
-description: "Platos que necesitan una fotografía propia."
 draft: false
 ---
-# Recetas por fotografiar 📷
 
-Son las recetas con `foto_pendiente: true`.
+# Recetas por fotografiar
 
-## Fotos pendientes
+Recetas que necesitan una fotografía propia.
 
-_Todavía no hay recetas agregadas._
-
-> [!tip] Cuando cocinemos una de estas recetas
-> Tomamos una foto del plato terminado, la guardamos en `03 - Recursos/Fotografías`, la insertamos en la nota y cambiamos `foto_pendiente` a `false`.
-
-_En la primera versión de la bóveda, esta lista se mantiene manualmente. La automatización vendrá después._
+- [[Aliño para ensalada de Verónica]]
+- [[Avena remojada de la noche anterior]]
+- [[Avena remojada estilo Buff Dudes — apunte]]
+- [[Avena remojada vegana — apunte]]
+- [[Batido proteico para resistencia]]
+- [[Borsch vegano de betarraga]]
+- [[Caldo de huesos para perros en olla lenta]]
+- [[Česnečka — sopa checa de ajo]]
+- [[Chana masala sencillo]]
+- [[Chili de bisonte con legumbres y verduras]]
+- [[Chili vegano — apunte con cantidades dudosas]]
+- [[Chili vegano de lentejas verdes]]
+- [[Choritos al vapor con cerveza]]
+- [[Chucrut casero fermentado]]
+- [[Curry cremoso de garbanzos y coco]]
+- [[Curry de garbanzos con espinaca y arroz de Steph]]
+- [[Curry de garbanzos con espinaca y arroz]]
+- [[Curry de papas, espinaca y ajo]]
+- [[Dal de lentejas rojas alto en proteínas]]
+- [[Dal de lentejas y garbanzos al curry]]
+- [[Empanaditas crujientes de papel de arroz]]
+- [[Ensalada de kale y quinoa]]
+- [[Ensalada de lentejas con verduras asadas]]
+- [[Ensalada de papas con palta y eneldo]]
+- [[Ensalada de quinoa con verduras al comino]]
+- [[Ensalada de quinoa, choclo y palta]]
+- [[Ensalada mediterránea de lentejas]]
+- [[Garbanzos a la Dani]]
+- [[Hamburguesas veganas — apunte]]
+- [[Harira — sopa marroquí de cordero y lentejas]]
+- [[Huevos al sartén con ratatouille]]
+- [[Lasaña de carne y ricota]]
+- [[Lasaña de espinaca y ricota]]
+- [[Minestrone de verduras]]
+- [[Pan al ajo asado]]
+- [[Pan sin amasar — dos versiones]]
+- [[Pollo estilo butter chicken en olla lenta]]
+- [[Porotos granados]]
+- [[Quequitos de plátano]]
+- [[Quesadillas de porotos negros]]
+- [[Ramen tailandés de curry rojo]]
+- [[Ramen vegano con caldo de shiitake]]
+- [[Rollitos suecos de canela (kanelbullar)]]
+- [[Sopa cremosa de porotos blancos]]
+- [[Sopa de lentejas al curry con coco]]
+- [[Sopa de porotos negros — apunte breve]]
+- [[Sopa de porotos negros con verduras]]
+- [[Sopa de porotos negros en olla lenta]]
+- [[Sopa instantánea en frasco — apunte]]
+- [[Sopa tailandesa de fideos con curry rojo]]

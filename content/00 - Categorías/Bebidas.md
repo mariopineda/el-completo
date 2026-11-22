@@ -1,15 +1,17 @@
 ---
 title: "Bebidas"
-description: "Para brindar, refrescarse o recuperar fuerzas."
-tags: []
 draft: false
 ---
 
-# 🥤 Bebidas
+# Bebidas
 
-Para brindar, refrescarse o recuperar fuerzas.
+Bebidas para cada ocasión.
 
-> [!info] Nuestra colección está creciendo
-> Publicaremos aquí las recetas de esta categoría cuando hayamos revisado sus instrucciones, cantidades y fotografías.
+## Recetas (1)
 
-[[index|← Volver a la portada]]
+- [[Batido proteico para resistencia]]
+
+> [!warning] Revisión pendiente
+> Algunas recetas conservan avisos de importación. Lee los avisos antes de cocinarlas.
+
+[[index|Volver a la portada]]

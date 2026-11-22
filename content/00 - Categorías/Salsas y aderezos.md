@@ -1,15 +1,17 @@
 ---
 title: "Salsas y aderezos"
-description: "El toque que cambia todo."
-tags: []
 draft: false
 ---
 
-# 🌶️ Salsas y aderezos
+# Salsas y aderezos
 
-El toque que cambia todo.
+Aliños, salsas y acompañamientos sabrosos.
 
-> [!info] Nuestra colección está creciendo
-> Publicaremos aquí las recetas de esta categoría cuando hayamos revisado sus instrucciones, cantidades y fotografías.
+## Recetas (1)
 
-[[index|← Volver a la portada]]
+- [[Aliño para ensalada de Verónica]]
+
+> [!warning] Revisión pendiente
+> Algunas recetas conservan avisos de importación. Lee los avisos antes de cocinarlas.
+
+[[index|Volver a la portada]]

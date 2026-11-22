@@ -34,7 +34,7 @@ Un recetario de casa, con recetas de todas partes, buena mano y hartas ganas de 
 
 Las recetas no están escritas en piedra. Cada vez que cocinamos, podemos ajustar un ingrediente, perfeccionar un paso y dejar nuestras observaciones. Las **cantidades aparecen tanto en la lista de ingredientes como dentro de las instrucciones**, para no andar saltando de una sección a otra.
 
-> [!note] Estamos armando la mesa
-> Las recetas importadas desde Paprika siguen en revisión antes de publicarse. Mientras tanto, el recetario completo permanece disponible en nuestra bóveda privada de Obsidian.
+> [!note] Un recetario en evolución
+> Ya puedes consultar las recetas importadas desde Paprika. Algunas siguen **pendientes de revisar**: lee sus avisos antes de cocinar. Las fotografías importadas todavía no están publicadas.
 
 **¡Buen provecho, po!**

@@ -1,15 +1,19 @@
 ---
 title: "Panes y masas"
-description: "Masas, panes y cosas que perfuman la cocina."
-tags: []
 draft: false
 ---
 
-# 🥖 Panes y masas
+# Panes y masas
 
-Masas, panes y cosas que perfuman la cocina.
+Pan, masas y preparaciones para hornear.
 
-> [!info] Nuestra colección está creciendo
-> Publicaremos aquí las recetas de esta categoría cuando hayamos revisado sus instrucciones, cantidades y fotografías.
+## Recetas (3)
 
-[[index|← Volver a la portada]]
+- [[Pan al ajo asado]]
+- [[Pan sin amasar — dos versiones]]
+- [[Rollitos suecos de canela (kanelbullar)]]
+
+> [!warning] Revisión pendiente
+> Algunas recetas conservan avisos de importación. Lee los avisos antes de cocinarlas.
+
+[[index|Volver a la portada]]
