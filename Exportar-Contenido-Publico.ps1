@@ -39,6 +39,7 @@ try {
         '03 - Recursos\Identidad visual\El Completo - Icono.png'
     )) { Copy-From-Vault $rel }
 
+    $approvedImages = @{}
     $byCategory = @{}
     $tryRecipes = New-Object System.Collections.Generic.List[string]
     $favRecipes = New-Object System.Collections.Generic.List[string]
@@ -53,6 +54,7 @@ try {
         $link = '- [[' + $stem + ']]'
         $byCategory[$category].Add($link)
         $raw = [System.IO.File]::ReadAllText($note.FullName, [System.Text.Encoding]::UTF8)
+        $sourceRaw = $raw
         if ($raw -notmatch '(?m)^draft:\s*true\s*$' -and $raw -notmatch '(?m)^draft:\s*false\s*$') {
             throw "No tiene propiedad draft; revisar antes de publicar: $rel"
         }
@@ -68,7 +70,29 @@ try {
         $raw = [regex]::Replace($raw, '(?is)<img\b[^>]*>', '')
         $raw = $raw.Replace('antes de cocinar o publicar', 'antes de cocinar o considerarla revisada')
         $raw = $raw.Replace('[[Plantilla de registro de cocina]]', 'registro de cocina')
-        if ($raw -match '!\[\[|<img\b|!\[[^\]]*\]\(') {
+        # Only a local image explicitly referenced inside the approved folders can be public.
+        # Never trust a photo merely because it was imported into Paprika.
+        $approvedMatch = [regex]::Match($sourceRaw, '(?m)^foto:\s*["'']?(03 - Recursos[/\\]Fotografías[/\\](?:Ilustraciones IA|Propias aprobadas)[/\\][^"''\r\n]+?\.(?:webp|png|jpe?g))["'']?\s*$')
+        if ($approvedMatch.Success) {
+            $safeRel = $approvedMatch.Groups[1].Value.Replace('/', '\')
+            $safeSource = Join-Path $VaultPath $safeRel
+            if (-not (Test-Path -LiteralPath $safeSource -PathType Leaf)) {
+                throw "Falta fotografia aprobada: $safeRel"
+            }
+            $safeName = [System.IO.Path]::GetFileName($safeRel)
+            $approvedImages[$safeRel] = $true
+            $raw = [regex]::Replace($raw, '(?m)^foto:.*$', "foto: '$($approvedMatch.Groups[1].Value)'")
+            $replacement = "## Fotografía`n`n![[$safeName]]`n`n"
+            $raw = [regex]::Replace($raw, '(?ms)^## Fotografía\r?\n.*?(?=^## Ingredientes\b)', [System.Text.RegularExpressions.MatchEvaluator]{ param($match) $replacement })
+        }
+
+        # After sanitization, allow exactly the new verified embed (if present).
+        $testCopy = $raw
+        if ($approvedMatch.Success) {
+            $expectedEmbed = '![[ ' + $safeName + ' ]]'
+            $testCopy = $testCopy.Replace('![[' + $safeName + ']]', '')
+        }
+        if ($testCopy -match '!\[\[|<img\b|!\[[^\]]*\]\(') {
             throw "Se encontro una referencia a imagen no aprobada en $rel. Se detuvo la exportacion."
         }
         Save-Text (Join-Path $stage $rel) $raw
@@ -114,15 +138,12 @@ try {
     $homepageContent = [regex]::Replace($homepageContent, '(?ms)^> \[!note\] Estamos armando la mesa\r?\n.*?(?=\r?\n\r?\n|\z)', '> [!note] Un recetario en evolución' + "`n> Ya puedes consultar las recetas importadas desde Paprika. Algunas siguen **pendientes de revisar**: lee sus avisos antes de cocinar. Las fotografías importadas todavía no están publicadas.")
     Save-Text $homePath $homepageContent
 
-    # Only user-approved own photos, never the Paprika image directory.
-    $approvedRel = '03 - Recursos\Fotografías\Propias aprobadas'
-    $approvedPath = Join-Path $VaultPath $approvedRel
-    if (Test-Path -LiteralPath $approvedPath -PathType Container) {
-        $targetDir = Join-Path $stage $approvedRel
-        [void](New-Item -ItemType Directory -Path $targetDir -Force)
-        Get-ChildItem -LiteralPath $approvedPath -Force | ForEach-Object {
-            Copy-Item -LiteralPath $_.FullName -Destination $targetDir -Recurse -Force
-        }
+    # Only explicitly referenced approved illustrations and own photos.
+    foreach ($safeRel in $approvedImages.Keys) {
+        $source = Join-Path $VaultPath $safeRel
+        $destination = Join-Path $stage $safeRel
+        [void](New-Item -ItemType Directory -Path (Split-Path -Parent $destination) -Force)
+        Copy-Item -LiteralPath $source -Destination $destination -Force
     }
 
     $outNotes = @(Get-ChildItem -LiteralPath (Join-Path $stage '01 - Recetas') -Filter '*.md' -Recurse -File)

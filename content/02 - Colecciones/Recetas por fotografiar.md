@@ -42,7 +42,6 @@ Recetas que necesitan una fotografía propia.
 - [[Lasaña de espinaca y ricota]]
 - [[Minestrone de verduras]]
 - [[Pan al ajo asado]]
-- [[Pan sin amasar — dos versiones]]
 - [[Pollo estilo butter chicken en olla lenta]]
 - [[Porotos granados]]
 - [[Quequitos de plátano]]

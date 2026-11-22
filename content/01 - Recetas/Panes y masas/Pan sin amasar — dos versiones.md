@@ -12,15 +12,16 @@ preparacion_min: 30
 coccion_min: null
 version: '1.0'
 favorita: false
-foto: ''
-foto_pendiente: true
-imagen_importada: true
-derechos_imagen: por-revisar
+foto: '03 - Recursos/Fotografías/Propias aprobadas/pan-sin-amasar-foto-propia.jpg'
+foto_pendiente: false
+imagen_importada: false
+derechos_imagen: propia-aprobada
 revision_pendiente: true
 alertas_de_importacion: 3
 fecha_de_ingreso: '2026-11-21'
 ultima_preparacion: null
 draft: false
+tipo_imagen: fotografia-propia
 ---
 # Pan sin amasar — dos versiones
 
@@ -48,8 +49,7 @@ draft: false
 
 ## Fotografía
 
-> [!info] Foto pendiente
-> La fotografía importada no se publica mientras no se confirme su autoría o licencia. En Obsidian se conserva la imagen original.
+![[pan-sin-amasar-foto-propia.jpg]]
 
 ## Ingredientes
 

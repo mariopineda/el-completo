@@ -12,15 +12,16 @@ preparacion_min: 5
 coccion_min: 25
 version: '1.0'
 favorita: false
-foto: ''
+foto: '03 - Recursos/Fotografías/Ilustraciones IA/chana-masala-sencillo-ilustracion.webp'
 foto_pendiente: true
-imagen_importada: true
-derechos_imagen: por-revisar
+imagen_importada: false
+derechos_imagen: ilustracion-ia
 revision_pendiente: true
 alertas_de_importacion: 0
 fecha_de_ingreso: '2026-11-21'
 ultima_preparacion: null
 draft: false
+tipo_imagen: ilustracion-ia
 ---
 # Chana masala sencillo
 
@@ -44,8 +45,7 @@ draft: false
 
 ## Fotografía
 
-> [!info] Foto pendiente
-> La fotografía importada no se publica mientras no se confirme su autoría o licencia. En Obsidian se conserva la imagen original.
+![[chana-masala-sencillo-ilustracion.webp]]
 
 ## Ingredientes
 
