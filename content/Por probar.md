@@ -17,6 +17,7 @@ Recetas que todavía estamos probando y mejorando.
 - [[Česnečka — sopa checa de ajo]]
 - [[Chana masala sencillo]]
 - [[Chili de bisonte con legumbres y verduras]]
+- [[Chili de bisonte o vacuno con abundantes verduras]]
 - [[Chili vegano — apunte con cantidades dudosas]]
 - [[Chili vegano de lentejas verdes]]
 - [[Choritos al vapor con cerveza]]

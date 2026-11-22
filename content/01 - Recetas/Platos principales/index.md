@@ -9,7 +9,7 @@ cssclasses:
 
 Recetas para compartir alrededor de la mesa.
 
-## Recetas ilustradas (19)
+## Recetas ilustradas (20)
 
 - ![[chana-masala-sencillo-ilustracion.webp]]  
   [[Chana masala sencillo]] <span class="el-completo-estados" title="Por probar; Datos pendientes de revisión" aria-label="Por probar; Datos pendientes de revisión">🧪 ⚠️</span>
@@ -49,6 +49,9 @@ Recetas para compartir alrededor de la mesa.
   [[Pollo estilo butter chicken en olla lenta]] <span class="el-completo-estados" title="Por probar; Datos pendientes de revisión" aria-label="Por probar; Datos pendientes de revisión">🧪 ⚠️</span>
 - ![[quesadillas-de-porotos-negros-ilustracion.webp]]  
   [[Quesadillas de porotos negros]] <span class="el-completo-estados" title="Por probar; Datos pendientes de revisión" aria-label="Por probar; Datos pendientes de revisión">🧪 ⚠️</span>
+
+- ![[chili-de-bisonte-o-vacuno-con-abundantes-verduras-ilustracion.webp]]  
+  [[Chili de bisonte o vacuno con abundantes verduras]] <span class="el-completo-estados" title="Por probar" aria-label="Por probar">🧪</span>
 
 > [!warning] Revisión pendiente
 > Algunas recetas conservan avisos de importación. Lee los avisos antes de cocinarlas.
