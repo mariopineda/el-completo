@@ -508,3 +508,39 @@ article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"], [id^="esta-
 .el-completo-escalador select:focus-visible{outline:3px solid var(--secondary);outline-offset:2px}
 .el-completo-escalador small{ flex-basis:100%; color:var(--darkgray); font-size:.8rem; line-height:1.35; }
 /* EL_COMPLETO_ESCALADOR_END */
+
+/* EL_COMPLETO_CARD_TITLES_VISIBLE_V1
+   A previous square-thumbnail fix put aspect-ratio:1/1 and overflow:hidden
+   on the entire first paragraph, which also contains the dish title and
+   badges. Keep only the image square; let the rest of the card grow. */
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"], [id^="esta-semana-en-la-cocina"]) + ul > li > p:first-child {
+  position: static;
+  width: 100%;
+  aspect-ratio: auto;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"], [id^="esta-semana-en-la-cocina"]) + ul > li > p:first-child img {
+  position: static;
+  inset: auto;
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1;
+  object-fit: cover !important;
+  object-position: center;
+  flex: 0 0 auto;
+}
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"], [id^="esta-semana-en-la-cocina"]) + ul > li > p:first-child > a {
+  flex: 0 0 auto;
+}
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"], [id^="esta-semana-en-la-cocina"]) + ul > li > p:first-child > .el-completo-estados {
+  margin-top: auto;
+}
+/* EL_COMPLETO_CARD_TITLES_VISIBLE_V1_END */
