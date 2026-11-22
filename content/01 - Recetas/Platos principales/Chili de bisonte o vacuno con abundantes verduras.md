@@ -80,7 +80,6 @@ Un chili con **más verduras que carne**, porotos rojos y sabor profundo de toma
 
 ![[chili-de-bisonte-o-vacuno-con-abundantes-verduras-ilustracion.webp]]
 
-*Ilustración generada con IA para identificar esta receta. No corresponde a una fotografía de una preparación real.*
 
 ## Ingredientes
 
