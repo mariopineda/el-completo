@@ -184,6 +184,13 @@ try {
     }
     $homepageText = $homepageText.Replace('## ¿Qué vamos a cocinar?', '## Recetas')
     Save-Text $homepagePath $homepageText
+    # EL_COMPLETO_PORTADAS_MINIMALISTAS_V1
+    # Esta portada pública sustituye el index original sin modificar Obsidian.
+    $portalScript = Join-Path $RepoPath 'Generar-Portadas-El-Completo.ps1'
+    if (-not (Test-Path -LiteralPath $portalScript -PathType Leaf)) {
+        throw 'Falta el generador de portadas minimalistas.'
+    }
+    & $portalScript -ContentPath $stage
 
     $outNotes = @(Get-ChildItem -LiteralPath (Join-Path $stage '01 - Recetas') -Filter '*.md' -Recurse -File | Where-Object { $_.Name -ne 'index.md' })
     $outPhotos = @(Get-ChildItem -LiteralPath $stage -Recurse -File | Where-Object {

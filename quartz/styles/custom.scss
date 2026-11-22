@@ -144,3 +144,228 @@ article h2[id^="recetas-ilustradas"] + ul > li a::after {
 .popover-hint > article.el-completo-galeria + .page-listing {
   display: none;
 }
+
+/* EL_COMPLETO_MINIMALISTA_V1: sin barras laterales; controles globales arriba. */
+.page {
+  max-width: none;
+}
+.page > #quartz-body {
+  display: block !important;
+  width: min(100%, 1040px);
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 40px);
+  box-sizing: border-box;
+}
+.page > #quartz-body > .sidebar.left,
+.page > #quartz-body > .sidebar.right {
+  display: none !important;
+}
+.page > #quartz-body > .center {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+.page > #quartz-body > .center > .page-header {
+  margin: 0;
+  padding: 0;
+}
+.page > #quartz-body > .center > .page-header > header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 14px 0 9px;
+  min-height: 48px;
+}
+.page > #quartz-body .page-header header .flex-component {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px !important;
+}
+.page > #quartz-body .page-header header .search {
+  min-width: 150px;
+  max-width: 280px;
+  width: clamp(150px, 35vw, 280px);
+}
+.page > #quartz-body .page-header header .search > .search-button {
+  height: 43px;
+  border-radius: 999px;
+  padding-right: 12px;
+  background: var(--light);
+}
+.page > #quartz-body .page-header header .search > .search-button:focus-visible,
+.page > #quartz-body .page-header header .darkmode:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 3px;
+}
+.page > #quartz-body .page-header header .darkmode {
+  display: block;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  text-align: center;
+  flex-shrink: 0;
+}
+.page > #quartz-body .page-header header .darkmode svg {
+  left: calc(50% - 10px);
+}
+.page > #quartz-body > .center > hr,
+.page > #quartz-body > .center > .page-footer {
+  display: none;
+}
+.page > #quartz-body > .center > article {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* Homepage: only the logo and three large destinations. */
+body[data-slug="index"] .article-title {
+  display: none;
+}
+body[data-slug="index"] .center > article .markdown-preview-view {
+  max-width: 760px;
+  margin: 0 auto;
+}
+body[data-slug="index"] .center > article .markdown-preview-view > p:first-child {
+  margin: 0 auto 1.25rem;
+  text-align: center;
+}
+body[data-slug="index"] .center > article .markdown-preview-view > p:first-child img {
+  display: block;
+  width: min(100%, 740px);
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 18px;
+}
+body[data-slug="index"] .center > article .markdown-preview-view > ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 auto 28px;
+  padding: 0;
+  list-style: none;
+}
+body[data-slug="index"] .center > article .markdown-preview-view > ul > li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+body[data-slug="index"] .center > article .markdown-preview-view > ul > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 116px;
+  padding: 16px 10px;
+  box-sizing: border-box;
+  border-radius: 17px;
+  border: 1px solid var(--lightgray);
+  background: color-mix(in srgb, var(--secondary) 8%, var(--light));
+  color: var(--dark);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 750;
+  text-align: center;
+  line-height: 1.25;
+  text-decoration: none;
+  box-shadow: 0 5px 17px rgba(38,31,22,.05);
+  transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+}
+body[data-slug="index"] .center > article .markdown-preview-view > ul > li > a:hover,
+body[data-slug="index"] .center > article .markdown-preview-view > ul > li > a:focus-visible {
+  border-color: var(--secondary);
+  box-shadow: 0 7px 22px rgba(38,31,22,.12);
+  transform: translateY(-2px);
+}
+
+/* Recipe/collection/resource portals use a consistent compact card grid. */
+article.el-completo-portal .markdown-preview-view > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  gap: 12px;
+  padding: 0;
+  margin: 1.25rem 0 2rem;
+  list-style: none;
+}
+article.el-completo-portal .markdown-preview-view > ul > li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+article.el-completo-portal .markdown-preview-view > ul > li > a {
+  display: flex;
+  align-items: center;
+  min-height: 76px;
+  padding: 14px 18px;
+  box-sizing: border-box;
+  border: 1px solid var(--lightgray);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--secondary) 5%, var(--light));
+  color: var(--dark);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: border-color .15s ease, transform .15s ease;
+}
+article.el-completo-portal .markdown-preview-view > ul > li > a:hover,
+article.el-completo-portal .markdown-preview-view > ul > li > a:focus-visible {
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+}
+/* Suppress Quartz's redundant folder file listing below the custom portal. */
+.popover-hint > article.el-completo-portal + .page-listing {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .page > #quartz-body {
+    padding: 0 15px;
+  }
+  .page > #quartz-body > .center > .page-header > header {
+    padding: 10px 0 6px;
+  }
+  .page > #quartz-body .page-header header .search {
+    min-width: 150px;
+    width: min(56vw, 300px);
+  }
+  body[data-slug="index"] .center > article .markdown-preview-view > p:first-child {
+    margin-bottom: 10px;
+  }
+  body[data-slug="index"] .center > article .markdown-preview-view > p:first-child img {
+    border-radius: 10px;
+  }
+  body[data-slug="index"] .center > article .markdown-preview-view > ul {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  body[data-slug="index"] .center > article .markdown-preview-view > ul > li > a {
+    min-height: 82px;
+    border-radius: 14px;
+    font-size: 1.18rem;
+  }
+  article.el-completo-portal .markdown-preview-view > ul {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+  article.el-completo-portal .markdown-preview-view > ul > li > a {
+    min-height: 67px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body[data-slug="index"] .center > article .markdown-preview-view > ul > li > a,
+  article.el-completo-portal .markdown-preview-view > ul > li > a {
+    transition: none;
+  }
+  body[data-slug="index"] .center > article .markdown-preview-view > ul > li > a:hover,
+  article.el-completo-portal .markdown-preview-view > ul > li > a:hover {
+    transform: none;
+  }
+}
+/* EL_COMPLETO_MINIMALISTA_END */
