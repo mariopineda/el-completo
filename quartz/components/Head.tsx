@@ -90,6 +90,8 @@ export default (() => {
           </>
         )}
 
+        {/* EL_COMPLETO_INTERACCIONES_V1 */}
+        <script defer src={joinSegments(baseDir, "static/interacciones-recetas.js")}></script>
         <link rel="icon" href={iconPath} />
         <link rel="apple-touch-icon" sizes="180x180" href={joinSegments(baseDir, "static/apple-touch-icon.png")} />
         <meta name="description" content={description} />

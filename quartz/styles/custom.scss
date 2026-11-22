@@ -491,3 +491,20 @@ article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"], [id^="esta-
   margin: 0;
 }
 /* EL_COMPLETO_SQUARE_THUMBS_FIX_V3_END */
+
+/* EL_COMPLETO_ESCALADOR_V1 */
+.el-completo-escalador {
+  display:flex; align-items:center; flex-wrap:wrap; gap:.65rem 1rem;
+  margin:1.1rem 0 1.3rem; padding: .85rem 1rem;
+  border:1px solid var(--lightgray); border-radius:13px;
+  background:color-mix(in srgb, var(--secondary) 6%, var(--light));
+}
+.el-completo-escalador label { font-weight:700; color:var(--dark); }
+.el-completo-escalador select {
+  min-width:90px; min-height:42px; border:1px solid var(--lightgray);
+  border-radius:9px; background:var(--light); color:var(--dark);
+  font:inherit; padding:.35rem .6rem; cursor:pointer;
+}
+.el-completo-escalador select:focus-visible{outline:3px solid var(--secondary);outline-offset:2px}
+.el-completo-escalador small{ flex-basis:100%; color:var(--darkgray); font-size:.8rem; line-height:1.35; }
+/* EL_COMPLETO_ESCALADOR_END */

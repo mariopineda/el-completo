@@ -31,6 +31,8 @@ jobs:
         run: node scripts/generar-menu-semanal.mjs
       - name: Actualizar tarjetas de recetas recientes
         run: node scripts/generar-recetas-recientes.mjs
+      - name: Preparar contadores y fichas de recetas
+        run: node scripts/preparar-interfaz-recetas.mjs
       - name: Generar el sitio
         run: npx quartz build
       - name: Evitar indexacion en buscadores
