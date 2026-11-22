@@ -54,7 +54,6 @@ nutricion:
   clasificaciones_verificadas: []
 noindex: true
 ---
-
 # Burrito de porotos negros y champiñones
 
 > [!info] 🧪 POR PROBAR
@@ -155,6 +154,24 @@ noindex: true
 
 **Fuente:** pendiente · **Fecha de cálculo:** pendiente · **% del valor diario:** no calculado.
 </details>
+
+## Pendiente para la próxima preparación
+
+> [!warning] Completar durante la próxima preparación
+> Anotar estas mediciones para calcular valores nutricionales confiables. **No modificar cantidades originales sin comprobarlas.**
+
+- [ ] Pesar el rendimiento final comestible (g o mL) y una porción representativa; registrar pérdidas por cocción cuando corresponda.
+- [ ] Confirmar qué ingredientes opcionales se usaron y en qué cantidad; definir si se incluyen en la porción nutricional.
+- [ ] Opcional sin confirmar: Sal y pimienta negra recién molida, a gusto
+- [ ] Confirmar el peso real (g) de los siguientes ingredientes antes de calcular la nutrición:
+- [ ] Medir: 2 tazas de porotos negros cocidos, enjuagados y escurridos
+- [ ] Medir: 2 tazas de espinaca fresca, picada
+- [ ] Medir: 2 dientes de ajo, picados finamente
+- [ ] Medir: 1 cucharada de aceite de oliva extra virgen
+- [ ] Medir: 1 cucharadita de comino molido
+- [ ] Medir: 1 cucharadita de pimentón ahumado (paprika ahumada)
+- [ ] Revisar también los otros 2 ingredientes con medidas caseras.
+- [ ] Anotar marcas y etiquetas nutricionales de alimentos envasados; confirmar agua, sal y aceite utilizados.
 
 ## Conservación y preparación anticipada
 

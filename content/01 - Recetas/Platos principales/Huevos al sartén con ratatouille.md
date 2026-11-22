@@ -22,6 +22,44 @@ fecha_de_ingreso: '2026-11-21'
 ultima_preparacion: null
 draft: false
 tipo_imagen: ilustracion-ia
+nutricion:
+  version: 2
+  estado: pendiente
+  fecha_calculo: null
+  fuentes: []
+  metodo: null
+  porcion_descripcion: "1 de 4 porciones del lote (peso pendiente)"
+  porcion_peso_g: null
+  rendimiento_total_g: null
+  porciones: 4
+  incluye_acompanamientos: false
+  valores_por_porcion:
+    energia_kcal: null
+    energia_kj: null
+    proteinas_g: null
+    carbohidratos_g: null
+    fibra_g: null
+    azucares_g: null
+    azucares_anadidos_g: null
+    grasas_totales_g: null
+    grasas_saturadas_g: null
+    grasas_monoinsaturadas_g: null
+    grasas_poliinsaturadas_g: null
+    grasas_trans_g: null
+    omega3_g: null
+    omega6_g: null
+    colesterol_mg: null
+    sodio_mg: null
+    potasio_mg: null
+    calcio_mg: null
+    hierro_mg: null
+    magnesio_mg: null
+    zinc_mg: null
+    vitamina_b12_mcg: null
+    vitamina_c_mg: null
+    vitamina_d_mcg: null
+    folato_mcg: null
+  clasificaciones_verificadas: []
 ---
 # Huevos al sartén con ratatouille
 
@@ -46,6 +84,58 @@ tipo_imagen: ilustracion-ia
 ## Fotografía
 
 ![[huevos-al-sarten-con-ratatouille-ilustracion.webp]]
+
+## Información nutricional
+
+**Porción:** 1 de 4 porciones del lote (peso pendiente) · **Rendimiento:** 4 porciones · **Peso por porción:** ND.
+
+**Estado:** Pendiente de cálculo verificable. **ND = No disponible, no cero.** No se inventan valores por falta de datos. Incluye solo ingredientes definidos; ingredientes opcionales deben confirmarse.
+
+| Resumen por porción | Cantidad |
+|---|---:|
+| Energía | ND kcal |
+| Proteínas | ND g |
+| Carbohidratos | ND g |
+| Grasas totales | ND g |
+| Grasas saturadas | ND g |
+| Fibra | ND g |
+
+<details>
+<summary><strong>Información nutricional completa (por porción)</strong></summary>
+
+<table>
+<thead><tr><th>Nutriente</th><th>Valor</th></tr></thead>
+<tbody>
+<tr><td>Energía</td><td>ND kcal</td></tr>
+<tr><td>Energía</td><td>ND kJ</td></tr>
+<tr><td>Proteínas</td><td>ND g</td></tr>
+<tr><td>Carbohidratos</td><td>ND g</td></tr>
+<tr><td>Fibra</td><td>ND g</td></tr>
+<tr><td>Azúcares totales</td><td>ND g</td></tr>
+<tr><td>Azúcares añadidos</td><td>ND g</td></tr>
+<tr><td>Grasas totales</td><td>ND g</td></tr>
+<tr><td>Grasas saturadas</td><td>ND g</td></tr>
+<tr><td>Grasas monoinsaturadas</td><td>ND g</td></tr>
+<tr><td>Grasas poliinsaturadas</td><td>ND g</td></tr>
+<tr><td>Grasas trans</td><td>ND g</td></tr>
+<tr><td>Omega-3</td><td>ND g</td></tr>
+<tr><td>Omega-6</td><td>ND g</td></tr>
+<tr><td>Colesterol</td><td>ND mg</td></tr>
+<tr><td>Sodio</td><td>ND mg</td></tr>
+<tr><td>Potasio</td><td>ND mg</td></tr>
+<tr><td>Calcio</td><td>ND mg</td></tr>
+<tr><td>Hierro</td><td>ND mg</td></tr>
+<tr><td>Magnesio</td><td>ND mg</td></tr>
+<tr><td>Zinc</td><td>ND mg</td></tr>
+<tr><td>Vitamina B12</td><td>ND µg</td></tr>
+<tr><td>Vitamina C</td><td>ND mg</td></tr>
+<tr><td>Vitamina D</td><td>ND µg</td></tr>
+<tr><td>Folato</td><td>ND µg</td></tr>
+</tbody>
+</table>
+
+**Fuente:** pendiente · **Fecha de cálculo:** pendiente · **% VD canadiense:** no calculado.
+</details>
 
 ## Ingredientes
 
@@ -82,6 +172,23 @@ Haz **8 espacios** en la salsa y casca **1 huevo grande en cada uno**. Tapa y co
 ### 4. Terminar
 
 Agrega la parte verde de los **4 cebollines**, la **½ taza restante de albahaca** y **1 cucharada restante de aceite de oliva**. Sirve con **4 rebanadas de baguette**.
+
+## Pendiente para la próxima preparación
+
+> [!warning] Completar durante la próxima preparación
+> Anotar estas mediciones para calcular valores nutricionales confiables. **No modificar cantidades originales sin comprobarlas.**
+
+- [ ] Pesar el rendimiento final comestible (g o mL) y una porción representativa; registrar pérdidas por cocción cuando corresponda.
+- [ ] Confirmar qué ingredientes opcionales se usaron y en qué cantidad; definir si se incluyen en la porción nutricional.
+- [ ] Opcional sin confirmar: Sal y pimienta negra a gusto
+- [ ] Confirmar el peso real (g) de los siguientes ingredientes antes de calcular la nutrición:
+- [ ] Medir: 3 cucharadas de aceite de oliva extra virgen, divididas
+- [ ] Medir: ¼ cucharadita de ají seco triturado
+- [ ] Medir: 4 dientes de ajo picados
+- [ ] Medir: 1 lata de 15 oz de tomates en cubitos
+- [ ] Medir: 1 lata de 15 oz de porotos blancos cannellini con su líquido
+- [ ] Medir: 1 taza de albahaca fresca, dividida
+- [ ] Anotar marcas y etiquetas nutricionales de alimentos envasados; confirmar agua, sal y aceite utilizados.
 
 ## Observaciones y mejoras
 
