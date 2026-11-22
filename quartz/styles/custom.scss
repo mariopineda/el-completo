@@ -455,3 +455,39 @@ body[data-slug="index"] article h2[id^="esta-semana-en-la-cocina"] + p {
     gap: .62rem;
   }
 }
+
+/* EL_COMPLETO_SQUARE_THUMBS_FIX_V3_START */
+/* Miniaturas 1:1 con recorte central, para galerias y las dos secciones de portada. */
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"], [id^="esta-semana-en-la-cocina"]) + ul > li > p:first-child {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  background: var(--lightgray);
+}
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"], [id^="esta-semana-en-la-cocina"]) + ul > li > p:first-child img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+/* Alternativa para una imagen directa dentro de li, sin contenedor p. */
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"], [id^="esta-semana-en-la-cocina"]) + ul > li > img:first-child {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  margin: 0;
+}
+/* EL_COMPLETO_SQUARE_THUMBS_FIX_V3_END */
