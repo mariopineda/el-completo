@@ -1,4 +1,4 @@
-﻿/* El Completo - estilo complementario para Quartz 5 */
+/* El Completo - estilo complementario para Quartz 5 */
 :root {
   --completo-crema: #fff8e9;
   --completo-palta: #487c2c;
@@ -137,3 +137,10 @@ article h2[id^="recetas-ilustradas"] + ul > li a::after {
   }
 }
 /* EL_COMPLETO_RECIPE_CARDS_END */
+
+/* EL_COMPLETO_FOLDER_GALLERIES_V1
+   Quartz folder-page automatically adds a file listing after index.md.
+   Hide that redundant list only for our eight generated recipe galleries. */
+.popover-hint > article.el-completo-galeria + .page-listing {
+  display: none;
+}

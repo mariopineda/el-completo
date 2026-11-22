@@ -1,4 +1,4 @@
-﻿#requires -Version 5.1
+#requires -Version 5.1
 param(
     [Parameter(Mandatory=$true)][string]$ContentPath
 )
@@ -14,7 +14,7 @@ if (-not (Test-Path -LiteralPath $recipesRoot -PathType Container) -or
     throw 'La exportación no contiene recetas, categorías o el icono de El Completo.'
 }
 
-$allRecipes = @(Get-ChildItem -LiteralPath $recipesRoot -Recurse -File -Filter '*.md')
+$allRecipes = @(Get-ChildItem -LiteralPath $recipesRoot -Recurse -File -Filter '*.md' | Where-Object { $_.Name -ne 'index.md' })
 if ($allRecipes.Count -lt 50) {
     throw "La galería requiere las recetas exportadas; encontradas: $($allRecipes.Count)."
 }
@@ -79,5 +79,27 @@ foreach ($categoryPage in $categories) {
 }
 if ($totalCards -ne $allRecipes.Count) {
     throw "Error de integridad: $totalCards tarjetas para $($allRecipes.Count) recetas."
+}
+# EL_COMPLETO_FOLDER_GALLERIES_V1: render the same gallery on recipe folder routes.
+foreach ($categoryPage in $categories) {
+    $name = [System.IO.Path]::GetFileNameWithoutExtension($categoryPage.Name)
+    $targetFolder = Join-Path $recipesRoot $name
+    if (-not (Test-Path -LiteralPath $targetFolder -PathType Container)) {
+        throw "No existe la carpeta para generar su portada: $name"
+    }
+    $target = Join-Path $targetFolder 'index.md'
+    $source = [System.IO.File]::ReadAllText($categoryPage.FullName,[System.Text.Encoding]::UTF8)
+    $folderMarkdown = [regex]::Replace($source,'(?m)^draft:[ \t]*false[ \t]*\r?$',"draft: false`ncssclasses:`n  - el-completo-galeria")
+    if ($folderMarkdown -eq $source -or $folderMarkdown -notmatch '(?m)^## Recetas ilustradas \(\d+\)') {
+        throw "La pagina de categoria no contiene una galeria valida: $name"
+    }
+    $folderMarkdown = $folderMarkdown.Replace('[[index|Volver a la portada]]', '[Volver a la portada](/el-completo/)')
+    if (Test-Path -LiteralPath $target) {
+        $previous = [System.IO.File]::ReadAllText($target,[System.Text.Encoding]::UTF8)
+        if ($previous -notmatch '(?m)^\s*-\s*el-completo-galeria\s*$') {
+            throw "Hay una portada de carpeta manual que no se puede sobrescribir: $target"
+        }
+    }
+    [System.IO.File]::WriteAllText($target,$folderMarkdown,$utf8)
 }
 Write-Host "Galerías listas: $($categories.Count) categorías, $totalCards tarjetas, $approvedCount imágenes aprobadas." -ForegroundColor Green

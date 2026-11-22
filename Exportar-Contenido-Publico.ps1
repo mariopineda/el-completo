@@ -1,4 +1,4 @@
-﻿param(
+param(
     [Parameter(Mandatory=$true)][string]$VaultPath,
     [Parameter(Mandatory=$true)][string]$RepoPath
 )
@@ -154,7 +154,7 @@ try {
     }
     & $galleryScript -ContentPath $stage
 
-    $outNotes = @(Get-ChildItem -LiteralPath (Join-Path $stage '01 - Recetas') -Filter '*.md' -Recurse -File)
+    $outNotes = @(Get-ChildItem -LiteralPath (Join-Path $stage '01 - Recetas') -Filter '*.md' -Recurse -File | Where-Object { $_.Name -ne 'index.md' })
     $outPhotos = @(Get-ChildItem -LiteralPath $stage -Recurse -File | Where-Object {
         $_.FullName -match 'Importadas de Paprika|\.paprikarecipes$|\.obsidian|04 - Sistema|00 - Plantillas'
     })
