@@ -9,7 +9,10 @@ cssclasses:
 
 Preparaciones de cuchara para entrar en calor.
 
-## Recetas ilustradas (15)
+## Recetas ilustradas (16)
+
+- ![[sopa-sueca-de-puerros-y-papas-ilustracion.webp]]  
+  [[Sopa sueca de puerros y papas]] · **por-probar**
 
 - ![[borsch-vegano-de-betarraga-ilustracion.webp]]  
   [[Borsch vegano de betarraga]] <span class="el-completo-estados" title="Por probar; Datos pendientes de revisión" aria-label="Por probar; Datos pendientes de revisión">🧪 ⚠️</span>
