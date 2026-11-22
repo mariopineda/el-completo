@@ -31,10 +31,9 @@ function Copy-From-Vault([string]$rel) {
     Copy-Item -LiteralPath $src -Destination $dst -Force
 }
 try {
-    # Home, glossary, and branding are deliberately whitelisted, not a vault dump.
+    # Home and approved branding are deliberately whitelisted, not a vault dump.
     foreach ($rel in @(
         'index.md',
-        '03 - Recursos\Glosario culinario chileno.md',
         '03 - Recursos\Identidad visual\El Completo - Logo.png',
         '03 - Recursos\Identidad visual\El Completo - Icono.png'
     )) { Copy-From-Vault $rel }

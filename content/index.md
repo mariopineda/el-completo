@@ -9,4 +9,3 @@ draft: false
 
 - [[01 - Recetas/index|🍲 Recetas]]
 - [[02 - Colecciones/index|❤️ Colecciones]]
-- [[03 - Recursos/index|📖 Recursos]]

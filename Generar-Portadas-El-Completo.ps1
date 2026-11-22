@@ -35,9 +35,6 @@ foreach ($name in @('Favoritas', 'Por probar', 'Recetas por fotografiar')) {
         throw "Falta colección publicada: $name"
     }
 }
-if (-not (Test-Path -LiteralPath (Join-Path $resourcesRoot 'Glosario culinario chileno.md') -PathType Leaf)) {
-    throw 'Falta glosario culinario chileno.'
-}
 if (-not (Test-Path -LiteralPath $logo -PathType Leaf)) {
     throw 'Falta el logo aprobado.'
 }
@@ -63,7 +60,6 @@ draft: false
 
 - [[01 - Recetas/index|🍲 Recetas]]
 - [[02 - Colecciones/index|❤️ Colecciones]]
-- [[03 - Recursos/index|📖 Recursos]]
 '@
 Save-Markdown (Join-Path $ContentPath 'index.md') $homepageMarkdown
 
@@ -112,22 +108,6 @@ Recetas agrupadas para encontrarlas más fácilmente.
 '@
 Save-Markdown (Join-Path $collectionRoot 'index.md') $collectionsIntro
 
-$resourcesIntro = @'
----
-title: "Recursos"
-draft: false
-cssclasses:
-  - el-completo-portal
----
 
-# Recursos
 
-Material de consulta para la cocina.
-
-- [[03 - Recursos/Glosario culinario chileno|📖 Glosario culinario chileno]]
-
-[Volver al inicio](/el-completo/)
-'@
-Save-Markdown (Join-Path $resourcesRoot 'index.md') $resourcesIntro
-
-Write-Host 'Portada minimalista: 3 accesos, 8 categorías, 3 colecciones y 1 recurso.' -ForegroundColor Green
+Write-Host 'Portada minimalista: 2 accesos, 8 categorías y 3 colecciones.' -ForegroundColor Green
