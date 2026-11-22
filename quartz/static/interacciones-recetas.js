@@ -35,7 +35,7 @@
     const article=document.querySelector('.center > article') || document.querySelector('article');
     if(!article)return;
     const slug=document.body.dataset.slug||'';
-    if(!slug.includes('01 - Recetas/')||slug.endsWith('/index'))return;
+    // Recipe pages are identified by their Ingredientes heading below, not by a Quartz URL slug.
     const headings=[...article.querySelectorAll('h2')];
     const ingredients=headings.find(h=>/^ingredientes\b/i.test(h.textContent.trim()));
     if(!ingredients)return;

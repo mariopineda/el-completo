@@ -35,7 +35,9 @@ for(const cat of cats){
   const p=path.join(dir,filename), original=read(p);
   // Remove the AI disclosure *caption*, not the image or provenance metadata.
   const updated=original.replace(/^> \[!note\] Imagen de referencia\r?\n(?:>[^\r\n]*(?:\r?\n|$))+/gmi,()=>{removed++;return '';});
-  if(updated!==original)write(p,updated);
+  // Remove italic AI-image captions such as those under the chili photograph.
+  const withoutItalicAiCaption = updated.replace(/^\s*\*Ilustraci[oÃ³]n generada con IA[^\r\n]*\*\s*$/gmi, '');
+  if(withoutItalicAiCaption!==original)write(p,withoutItalicAiCaption);
  }
 }
 console.log('El Completo — recipe counts:',JSON.stringify({total,favorites,toTry,categories:counts,AI_captions_removed:removed},null,2));
