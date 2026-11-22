@@ -7,15 +7,22 @@ draft: false
 
 Verduras, ensaladas y cosas para acompañar.
 
-## Recetas (7)
+## Recetas ilustradas (7)
 
-- [[Chucrut casero fermentado]]
-- [[Ensalada de kale y quinoa]]
-- [[Ensalada de lentejas con verduras asadas]]
-- [[Ensalada de papas con palta y eneldo]]
-- [[Ensalada de quinoa con verduras al comino]]
-- [[Ensalada de quinoa, choclo y palta]]
-- [[Ensalada mediterránea de lentejas]]
+- ![[chucrut-casero-fermentado-ilustracion.webp]]  
+  [[Chucrut casero fermentado]]
+- ![[ensalada-de-kale-y-quinoa-ilustracion.webp]]  
+  [[Ensalada de kale y quinoa]]
+- ![[ensalada-de-lentejas-con-verduras-asadas-ilustracion.webp]]  
+  [[Ensalada de lentejas con verduras asadas]]
+- ![[ensalada-de-papas-con-palta-y-eneldo-ilustracion.webp]]  
+  [[Ensalada de papas con palta y eneldo]]
+- ![[ensalada-de-quinoa-con-verduras-al-comino-ilustracion.webp]]  
+  [[Ensalada de quinoa con verduras al comino]]
+- ![[ensalada-de-quinoa-choclo-y-palta-ilustracion.webp]]  
+  [[Ensalada de quinoa, choclo y palta]]
+- ![[ensalada-mediterranea-de-lentejas-ilustracion.webp]]  
+  [[Ensalada mediterránea de lentejas]]
 
 > [!warning] Revisión pendiente
 > Algunas recetas conservan avisos de importación. Lee los avisos antes de cocinarlas.

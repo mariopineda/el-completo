@@ -1,4 +1,4 @@
-/* El Completo - estilo complementario para Quartz 5 */
+﻿/* El Completo - estilo complementario para Quartz 5 */
 :root {
   --completo-crema: #fff8e9;
   --completo-palta: #487c2c;
@@ -29,3 +29,111 @@ article input[type="checkbox"] { accent-color: var(--completo-palta); }
   article table td, article table th { padding: .45rem; }
   article img[src*="Logo"] { border-radius: 10px; margin-bottom: 1rem; }
 }
+
+/* EL_COMPLETO_RECIPE_CARDS_START v1 */
+/* The adjacent sibling selector scopes these rules exclusively to the eight
+   automatically generated category galleries. No changes to recipe pages. */
+article h2[id^="recetas-ilustradas"] + ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+  gap: 1.1rem;
+  padding: 0;
+  margin: 1.2rem 0 2.4rem;
+  list-style: none;
+  align-items: stretch;
+}
+
+article h2[id^="recetas-ilustradas"] + ul > li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 15px;
+  box-shadow: 0 3px 14px rgba(35, 28, 18, .08);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+article h2[id^="recetas-ilustradas"] + ul > li:hover {
+  transform: translateY(-3px);
+  border-color: var(--secondary);
+  box-shadow: 0 9px 23px rgba(35, 28, 18, .15);
+}
+
+article h2[id^="recetas-ilustradas"] + ul > li:focus-within {
+  outline: 3px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+article h2[id^="recetas-ilustradas"] + ul > li p {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+article h2[id^="recetas-ilustradas"] + ul > li img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: var(--lightgray);
+}
+
+article h2[id^="recetas-ilustradas"] + ul > li br {
+  display: none;
+}
+
+article h2[id^="recetas-ilustradas"] + ul > li a {
+  display: block;
+  padding: .82rem .85rem 1rem;
+  min-height: 3.5rem;
+  color: var(--darkgray);
+  background: none;
+  font-size: .97rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+/* Stretch the recipe link across the image too: the whole card is clickable. */
+article h2[id^="recetas-ilustradas"] + ul > li a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  article h2[id^="recetas-ilustradas"] + ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .7rem;
+  }
+  article h2[id^="recetas-ilustradas"] + ul > li {
+    border-radius: 12px;
+  }
+  article h2[id^="recetas-ilustradas"] + ul > li a {
+    font-size: .86rem;
+    padding: .62rem .62rem .8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  article h2[id^="recetas-ilustradas"] + ul > li {
+    transition: none;
+  }
+  article h2[id^="recetas-ilustradas"] + ul > li:hover {
+    transform: none;
+  }
+}
+/* EL_COMPLETO_RECIPE_CARDS_END */

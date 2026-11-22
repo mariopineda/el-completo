@@ -7,9 +7,10 @@ draft: false
 
 Un gustito para cerrar la comida.
 
-## Recetas (1)
+## Recetas ilustradas (1)
 
-- [[Quequitos de plátano]]
+- ![[quequitos-de-platano-ilustracion.webp]]  
+  [[Quequitos de plátano]]
 
 > [!warning] Revisión pendiente
 > Algunas recetas conservan avisos de importación. Lee los avisos antes de cocinarlas.

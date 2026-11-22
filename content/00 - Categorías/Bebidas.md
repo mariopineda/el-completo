@@ -7,9 +7,10 @@ draft: false
 
 Bebidas para cada ocasión.
 
-## Recetas (1)
+## Recetas ilustradas (1)
 
-- [[Batido proteico para resistencia]]
+- ![[batido-proteico-para-resistencia-ilustracion.webp]]  
+  [[Batido proteico para resistencia]]
 
 > [!warning] Revisión pendiente
 > Algunas recetas conservan avisos de importación. Lee los avisos antes de cocinarlas.

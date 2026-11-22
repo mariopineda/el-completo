@@ -7,9 +7,10 @@ draft: false
 
 Aliños, salsas y acompañamientos sabrosos.
 
-## Recetas (1)
+## Recetas ilustradas (1)
 
-- [[Aliño para ensalada de Verónica]]
+- ![[alino-para-ensalada-de-veronica-ilustracion.webp]]  
+  [[Aliño para ensalada de Verónica]]
 
 > [!warning] Revisión pendiente
 > Algunas recetas conservan avisos de importación. Lee los avisos antes de cocinarlas.

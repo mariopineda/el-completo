@@ -146,6 +146,14 @@ try {
         Copy-Item -LiteralPath $source -Destination $destination -Force
     }
 
+    # EL_COMPLETO_GALERIAS_AUTOMATICAS_V1
+    # Insertado antes de verificar y activar las copias públicas.
+    $galleryScript = Join-Path $RepoPath 'Generar-Galerias-El-Completo.ps1'
+    if (-not (Test-Path -LiteralPath $galleryScript -PathType Leaf)) {
+        throw 'Falta el generador de galerías automáticas.'
+    }
+    & $galleryScript -ContentPath $stage
+
     $outNotes = @(Get-ChildItem -LiteralPath (Join-Path $stage '01 - Recetas') -Filter '*.md' -Recurse -File)
     $outPhotos = @(Get-ChildItem -LiteralPath $stage -Recurse -File | Where-Object {
         $_.FullName -match 'Importadas de Paprika|\.paprikarecipes$|\.obsidian|04 - Sistema|00 - Plantillas'
