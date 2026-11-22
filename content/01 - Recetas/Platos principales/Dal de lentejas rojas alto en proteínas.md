@@ -12,15 +12,16 @@ preparacion_min: 5
 coccion_min: 30
 version: '1.0'
 favorita: false
-foto: ''
+foto: '03 - Recursos/Fotografías/Ilustraciones IA/dal-de-lentejas-rojas-alto-en-proteinas-ilustracion.webp'
 foto_pendiente: true
 imagen_importada: false
-derechos_imagen: sin-imagen
+derechos_imagen: ilustracion-ia
 revision_pendiente: true
 alertas_de_importacion: 1
 fecha_de_ingreso: '2026-11-21'
 ultima_preparacion: null
 draft: false
+tipo_imagen: ilustracion-ia
 ---
 # Dal de lentejas rojas alto en proteínas
 
@@ -46,8 +47,7 @@ draft: false
 
 ## Fotografía
 
-> [!info] Foto pendiente
-> La fotografía importada no se publica mientras no se confirme su autoría o licencia. En Obsidian se conserva la imagen original.
+![[dal-de-lentejas-rojas-alto-en-proteinas-ilustracion.webp]]
 
 ## Ingredientes
 

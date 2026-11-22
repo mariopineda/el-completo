@@ -12,15 +12,16 @@ preparacion_min: null
 coccion_min: null
 version: '1.0'
 favorita: true
-foto: ''
+foto: '03 - Recursos/Fotografías/Ilustraciones IA/alino-para-ensalada-de-veronica-ilustracion.webp'
 foto_pendiente: true
 imagen_importada: false
-derechos_imagen: sin-imagen
+derechos_imagen: ilustracion-ia
 revision_pendiente: true
 alertas_de_importacion: 1
 fecha_de_ingreso: '2026-11-21'
 ultima_preparacion: null
 draft: false
+tipo_imagen: ilustracion-ia
 ---
 # Aliño para ensalada de Verónica
 
@@ -46,8 +47,7 @@ draft: false
 
 ## Fotografía
 
-> [!info] Foto pendiente
-> La fotografía importada no se publica mientras no se confirme su autoría o licencia. En Obsidian se conserva la imagen original.
+![[alino-para-ensalada-de-veronica-ilustracion.webp]]
 
 ## Ingredientes
 
