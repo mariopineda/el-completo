@@ -11,6 +11,13 @@ draft: false
 - [[Favoritas|❤️ Favoritas]]
 - [[Por probar|🍽️ Por probar]]
 
+<!-- EL_COMPLETO_MENU_SEMANAL_START -->
+
+## Esta semana en la cocina
+
+_Todavía no hay recetas seleccionadas para esta semana._
+
+<!-- EL_COMPLETO_MENU_SEMANAL_END -->
 <!-- EL_COMPLETO_RECIENTES_START -->
 
 ## Recetas recientes

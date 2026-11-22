@@ -3,6 +3,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '0 9 * * 1'
+
 permissions:
   contents: read
   pages: write
@@ -24,6 +27,8 @@ jobs:
         run: npm ci
       - name: Instalar complementos de Quartz
         run: npx quartz plugin install
+      - name: Generar menu semanal
+        run: node scripts/generar-menu-semanal.mjs
       - name: Actualizar tarjetas de recetas recientes
         run: node scripts/generar-recetas-recientes.mjs
       - name: Generar el sitio
