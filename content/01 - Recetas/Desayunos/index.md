@@ -9,7 +9,10 @@ cssclasses:
 
 Para comenzar el día con ganas.
 
-## Recetas ilustradas (3)
+## Recetas ilustradas (4)
+
+- ![[Burrito de porotos negros y champiÃ±ones.webp]]  
+  [[Burrito de porotos negros y champiÃ±ones]] Â· **Por probar**
 
 - ![[avena-remojada-de-la-noche-anterior-ilustracion.webp]]  
   [[Avena remojada de la noche anterior]]
