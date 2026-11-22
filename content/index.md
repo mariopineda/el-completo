@@ -16,13 +16,13 @@ Un recetario de casa, con recetas de todas partes, buena mano y hartas ganas de 
 > [!tip] ¿Buscái algo rico?
 > Usa **Buscar** en la barra lateral o presiona **Ctrl + K** para encontrar una receta por nombre, ingrediente o palabra clave.
 
-## ¿Qué vamos a cocinar?
+## Recetas
 
 | 🍳 Para empezar el día | 🍲 Para la mesa | 🍰 Para darse un gusto |
 | :--- | :--- | :--- |
-| [[Desayunos]] | [[Platos principales]] | [[Postres y dulces]] |
-| [[Panes y masas]] | [[Sopas y guisos]] | [[Bebidas]] |
-| [[Ensaladas y acompañamientos]] | [[Salsas y aderezos]] | [[Glosario culinario chileno\|Nuestro glosario]] |
+| [[01 - Recetas/Desayunos/index|Desayunos]] | [[01 - Recetas/Platos principales/index|Platos principales]] | [[01 - Recetas/Postres y dulces/index|Postres y dulces]] |
+| [[01 - Recetas/Panes y masas/index|Panes y masas]] | [[01 - Recetas/Sopas y guisos/index|Sopas y guisos]] | [[01 - Recetas/Bebidas/index|Bebidas]] |
+| [[01 - Recetas/Ensaladas y acompañamientos/index|Ensaladas y acompañamientos]] | [[01 - Recetas/Salsas y aderezos/index|Salsas y aderezos]] | [[Glosario culinario chileno\|Nuestro glosario]] |
 
 ## Colecciones de la casa
 

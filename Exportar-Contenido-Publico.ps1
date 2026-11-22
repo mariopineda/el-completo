@@ -1,4 +1,4 @@
-param(
+﻿param(
     [Parameter(Mandatory=$true)][string]$VaultPath,
     [Parameter(Mandatory=$true)][string]$RepoPath
 )
@@ -153,6 +153,37 @@ try {
         throw 'Falta el generador de galerías automáticas.'
     }
     & $galleryScript -ContentPath $stage
+    # EL_COMPLETO_SOLO_RECETAS_V1
+    # Las paginas 00 - Categorias son temporales: nunca se publican.
+    $temporaryCategories = Join-Path $stage '00 - Categorías'
+    $temporaryPages = @(Get-ChildItem -LiteralPath $temporaryCategories -Filter '*.md' -File)
+    $publicGalleryPages = @(Get-ChildItem -LiteralPath (Join-Path $stage '01 - Recetas') -Filter 'index.md' -Recurse -File)
+    if ($temporaryPages.Count -ne 8 -or $publicGalleryPages.Count -ne 8) {
+        throw 'Faltan galerias verificadas. No se elimina ningun archivo publico.'
+    }
+    Remove-Item -LiteralPath $temporaryCategories -Recurse -Force
+
+    # Vinculos sin ambiguedad a las galerias canonicas de 01 - Recetas.
+    $canonicalLinks = [ordered]@{
+        'Bebidas'                     = '01 - Recetas/Bebidas/index'
+        'Desayunos'                   = '01 - Recetas/Desayunos/index'
+        'Ensaladas y acompañamientos' = '01 - Recetas/Ensaladas y acompañamientos/index'
+        'Panes y masas'               = '01 - Recetas/Panes y masas/index'
+        'Platos principales'          = '01 - Recetas/Platos principales/index'
+        'Postres y dulces'            = '01 - Recetas/Postres y dulces/index'
+        'Salsas y aderezos'           = '01 - Recetas/Salsas y aderezos/index'
+        'Sopas y guisos'              = '01 - Recetas/Sopas y guisos/index'
+    }
+    $homepagePath = Join-Path $stage 'index.md'
+    $homepageText = [System.IO.File]::ReadAllText($homepagePath, [System.Text.Encoding]::UTF8)
+    foreach ($categoryName in $canonicalLinks.Keys) {
+        $homepageText = $homepageText.Replace(
+            '[[' + $categoryName + ']]',
+            '[[' + $canonicalLinks[$categoryName] + '|' + $categoryName + ']]'
+        )
+    }
+    $homepageText = $homepageText.Replace('## ¿Qué vamos a cocinar?', '## Recetas')
+    Save-Text $homepagePath $homepageText
 
     $outNotes = @(Get-ChildItem -LiteralPath (Join-Path $stage '01 - Recetas') -Filter '*.md' -Recurse -File | Where-Object { $_.Name -ne 'index.md' })
     $outPhotos = @(Get-ChildItem -LiteralPath $stage -Recurse -File | Where-Object {
