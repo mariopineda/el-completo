@@ -1,4 +1,4 @@
-#requires -Version 5.1
+﻿#requires -Version 5.1
 param(
     [Parameter(Mandatory=$true)][string]$ContentPath
 )
@@ -103,3 +103,11 @@ foreach ($categoryPage in $categories) {
     [System.IO.File]::WriteAllText($target,$folderMarkdown,$utf8)
 }
 Write-Host "Galerías listas: $($categories.Count) categorías, $totalCards tarjetas, $approvedCount imágenes aprobadas." -ForegroundColor Green
+
+# EL_COMPLETO_ESTADOS_EMOJI_V2
+# Mantener los estados visibles al regenerar las galerias desde Obsidian.
+$emojiScript = Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Path) 'Aplicar-Estados-El-Completo.ps1'
+if (-not (Test-Path -LiteralPath $emojiScript -PathType Leaf)) {
+    throw 'Falta el procesador de emojis de las galerias.'
+}
+& $emojiScript -ContentPath $ContentPath

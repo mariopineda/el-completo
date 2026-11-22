@@ -369,3 +369,21 @@ article.el-completo-portal .markdown-preview-view > ul > li > a:focus-visible {
   }
 }
 /* EL_COMPLETO_MINIMALISTA_END */
+
+/* EL_COMPLETO_ESTADOS_EMOJI_V2 */
+/* Estados visibles sin texto redundante: ❤️ favorita, 🧪 por probar, ⚠️ revisión. */
+article h2[id^="recetas-ilustradas"] + ul > li .el-completo-estados {
+  display: block;
+  padding: 0 .85rem .85rem;
+  margin-top: auto;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: .1rem;
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  article h2[id^="recetas-ilustradas"] + ul > li .el-completo-estados {
+    padding: 0 .62rem .7rem;
+    font-size: 1.1rem;
+  }
+}
