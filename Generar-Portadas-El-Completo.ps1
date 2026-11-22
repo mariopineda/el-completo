@@ -61,6 +61,14 @@ draft: false
 - [[01 - Recetas/index|🍲 Recetas]]
 - [[Favoritas|❤️ Favoritas]]
 - [[Por probar|🍽️ Por probar]]
+
+<!-- EL_COMPLETO_RECIENTES_START -->
+
+## Recetas recientes
+
+_Las cinco recetas agregadas más recientemente aparecerán aquí al publicarse el sitio._
+
+<!-- EL_COMPLETO_RECIENTES_END -->
 '@
 Save-Markdown (Join-Path $ContentPath 'index.md') $homepageMarkdown
 

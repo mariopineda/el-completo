@@ -33,7 +33,7 @@ article input[type="checkbox"] { accent-color: var(--completo-palta); }
 /* EL_COMPLETO_RECIPE_CARDS_START v1 */
 /* The adjacent sibling selector scopes these rules exclusively to the eight
    automatically generated category galleries. No changes to recipe pages. */
-article h2[id^="recetas-ilustradas"] + ul {
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
   gap: 1.1rem;
@@ -43,7 +43,7 @@ article h2[id^="recetas-ilustradas"] + ul {
   align-items: stretch;
 }
 
-article h2[id^="recetas-ilustradas"] + ul > li {
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul > li {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -59,24 +59,24 @@ article h2[id^="recetas-ilustradas"] + ul > li {
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 
-article h2[id^="recetas-ilustradas"] + ul > li:hover {
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul > li:hover {
   transform: translateY(-3px);
   border-color: var(--secondary);
   box-shadow: 0 9px 23px rgba(35, 28, 18, .15);
 }
 
-article h2[id^="recetas-ilustradas"] + ul > li:focus-within {
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul > li:focus-within {
   outline: 3px solid var(--secondary);
   outline-offset: 2px;
 }
 
-article h2[id^="recetas-ilustradas"] + ul > li p {
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul > li p {
   margin: 0;
   padding: 0;
   min-width: 0;
 }
 
-article h2[id^="recetas-ilustradas"] + ul > li img {
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul > li img {
   display: block;
   width: 100%;
   height: auto;
@@ -89,11 +89,11 @@ article h2[id^="recetas-ilustradas"] + ul > li img {
   background: var(--lightgray);
 }
 
-article h2[id^="recetas-ilustradas"] + ul > li br {
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul > li br {
   display: none;
 }
 
-article h2[id^="recetas-ilustradas"] + ul > li a {
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul > li a {
   display: block;
   padding: .82rem .85rem 1rem;
   min-height: 3.5rem;
@@ -107,7 +107,7 @@ article h2[id^="recetas-ilustradas"] + ul > li a {
 }
 
 /* Stretch the recipe link across the image too: the whole card is clickable. */
-article h2[id^="recetas-ilustradas"] + ul > li a::after {
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul > li a::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -115,24 +115,24 @@ article h2[id^="recetas-ilustradas"] + ul > li a::after {
 }
 
 @media (max-width: 600px) {
-  article h2[id^="recetas-ilustradas"] + ul {
+  article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: .7rem;
   }
-  article h2[id^="recetas-ilustradas"] + ul > li {
+  article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul > li {
     border-radius: 12px;
   }
-  article h2[id^="recetas-ilustradas"] + ul > li a {
+  article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul > li a {
     font-size: .86rem;
     padding: .62rem .62rem .8rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  article h2[id^="recetas-ilustradas"] + ul > li {
+  article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul > li {
     transition: none;
   }
-  article h2[id^="recetas-ilustradas"] + ul > li:hover {
+  article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul > li:hover {
     transform: none;
   }
 }
@@ -244,7 +244,7 @@ body[data-slug="index"] .center > article .markdown-preview-view > p:first-child
   margin: 0 auto;
   border-radius: 18px;
 }
-body[data-slug="index"] .center > article .markdown-preview-view > ul {
+body[data-slug="index"] .center > article .markdown-preview-view > ul:first-of-type {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
@@ -252,13 +252,13 @@ body[data-slug="index"] .center > article .markdown-preview-view > ul {
   padding: 0;
   list-style: none;
 }
-body[data-slug="index"] .center > article .markdown-preview-view > ul > li {
+body[data-slug="index"] .center > article .markdown-preview-view > ul:first-of-type > li {
   list-style: none;
   margin: 0;
   padding: 0;
   min-width: 0;
 }
-body[data-slug="index"] .center > article .markdown-preview-view > ul > li > a {
+body[data-slug="index"] .center > article .markdown-preview-view > ul:first-of-type > li > a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -277,8 +277,8 @@ body[data-slug="index"] .center > article .markdown-preview-view > ul > li > a {
   box-shadow: 0 5px 17px rgba(38,31,22,.05);
   transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
 }
-body[data-slug="index"] .center > article .markdown-preview-view > ul > li > a:hover,
-body[data-slug="index"] .center > article .markdown-preview-view > ul > li > a:focus-visible {
+body[data-slug="index"] .center > article .markdown-preview-view > ul:first-of-type > li > a:hover,
+body[data-slug="index"] .center > article .markdown-preview-view > ul:first-of-type > li > a:focus-visible {
   border-color: var(--secondary);
   box-shadow: 0 7px 22px rgba(38,31,22,.12);
   transform: translateY(-2px);
@@ -341,11 +341,11 @@ article.el-completo-portal .markdown-preview-view > ul > li > a:focus-visible {
   body[data-slug="index"] .center > article .markdown-preview-view > p:first-child img {
     border-radius: 10px;
   }
-  body[data-slug="index"] .center > article .markdown-preview-view > ul {
+  body[data-slug="index"] .center > article .markdown-preview-view > ul:first-of-type {
     grid-template-columns: 1fr;
     gap: 10px;
   }
-  body[data-slug="index"] .center > article .markdown-preview-view > ul > li > a {
+  body[data-slug="index"] .center > article .markdown-preview-view > ul:first-of-type > li > a {
     min-height: 82px;
     border-radius: 14px;
     font-size: 1.18rem;
@@ -359,11 +359,11 @@ article.el-completo-portal .markdown-preview-view > ul > li > a:focus-visible {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  body[data-slug="index"] .center > article .markdown-preview-view > ul > li > a,
+  body[data-slug="index"] .center > article .markdown-preview-view > ul:first-of-type > li > a,
   article.el-completo-portal .markdown-preview-view > ul > li > a {
     transition: none;
   }
-  body[data-slug="index"] .center > article .markdown-preview-view > ul > li > a:hover,
+  body[data-slug="index"] .center > article .markdown-preview-view > ul:first-of-type > li > a:hover,
   article.el-completo-portal .markdown-preview-view > ul > li > a:hover {
     transform: none;
   }
@@ -372,7 +372,7 @@ article.el-completo-portal .markdown-preview-view > ul > li > a:focus-visible {
 
 /* EL_COMPLETO_ESTADOS_EMOJI_V2 */
 /* Estados visibles sin texto redundante: ❤️ favorita, 🧪 por probar, ⚠️ revisión. */
-article h2[id^="recetas-ilustradas"] + ul > li .el-completo-estados {
+article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul > li .el-completo-estados {
   display: block;
   padding: 0 .85rem .85rem;
   margin-top: auto;
@@ -382,8 +382,42 @@ article h2[id^="recetas-ilustradas"] + ul > li .el-completo-estados {
   white-space: nowrap;
 }
 @media (max-width: 600px) {
-  article h2[id^="recetas-ilustradas"] + ul > li .el-completo-estados {
+  article h2:is([id^="recetas-ilustradas"], [id^="recetas-recientes"]) + ul > li .el-completo-estados {
     padding: 0 .62rem .7rem;
     font-size: 1.1rem;
+  }
+}
+
+/* EL_COMPLETO_RECIENTES_V1 - Cinco recetas recientes en portada. */
+body[data-slug="index"] article h2[id^="recetas-recientes"] + ul {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .72rem;
+  margin: 1rem 0 2.2rem;
+}
+body[data-slug="index"] article h2[id^="recetas-recientes"] + ul > li {
+  border-radius: 13px;
+}
+body[data-slug="index"] article h2[id^="recetas-recientes"] + ul > li a {
+  font-size: .84rem;
+  padding: .62rem .65rem .3rem;
+  min-height: auto;
+}
+body[data-slug="index"] article h2[id^="recetas-recientes"] + ul > li .el-completo-reciente-categoria {
+  display: block;
+  padding: 0 .65rem .7rem;
+  color: var(--gray);
+  font-size: .72rem;
+  line-height: 1.2;
+  margin-top: auto;
+}
+@media (max-width: 760px) {
+  body[data-slug="index"] article h2[id^="recetas-recientes"] + ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 460px) {
+  body[data-slug="index"] article h2[id^="recetas-recientes"] + ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .62rem;
   }
 }

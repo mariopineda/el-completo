@@ -24,6 +24,8 @@ jobs:
         run: npm ci
       - name: Instalar complementos de Quartz
         run: npx quartz plugin install
+      - name: Actualizar tarjetas de recetas recientes
+        run: node scripts/generar-recetas-recientes.mjs
       - name: Generar el sitio
         run: npx quartz build
       - name: Evitar indexacion en buscadores
