@@ -41,3 +41,36 @@ for(const cat of cats){
  }
 }
 console.log('El Completo — recipe counts:',JSON.stringify({total,favorites,toTry,categories:counts,AI_captions_removed:removed},null,2));
+
+/* EL_COMPLETO_COLECCIONES_ILUSTRADAS_V1
+ * Publish collection links as recipe-card galleries, reusing category thumbnails.
+ * The repository's Por probar.md / Favoritas.md remain simple Obsidian link lists.
+ */
+const collectionCards = new Map();
+for (const category of cats) {
+  const categoryIndex = path.join(root, category, 'index.md');
+  if (!fs.existsSync(categoryIndex)) continue;
+  const source = read(categoryIndex);
+  const cardPattern = /^-\s+!\[\[([^\]\r\n]+)\]\][ \t]*\r?\n[ \t]*\[\[([^\]|\r\n]+)(?:\|[^\]\r\n]+)?\]\]([^\r\n]*)/gm;
+  for (const m of source.matchAll(cardPattern)) {
+    collectionCards.set(m[2].trim(), { image: m[1], badges: m[3].trim() });
+  }
+}
+for (const collection of ['Por probar.md', 'Favoritas.md']) {
+  const target = path.join(base, collection);
+  let md = read(target);
+  if (/^## Recetas ilustradas \(/m.test(md)) continue;
+  const linkPattern = /^-\s+\[\[([^\]|\r\n]+)(?:\|[^\]\r\n]+)?\]\][ \t]*$/gm;
+  const names = [...md.matchAll(linkPattern)].map(m => m[1].trim());
+  if (names.length === 0) continue;
+  const missing = names.filter(name => !collectionCards.has(name));
+  if (missing.length) throw new Error(`${collection}: no thumbnail in category gallery for ${missing.join('; ')}`);
+  const output = names.map(name => {
+    const {image, badges} = collectionCards.get(name);
+    return `- ![[${image}]]  \n  [[${name}]]${badges ? ' ' + badges : ''}`;
+  });
+  md = md.replace(linkPattern, '').trimEnd();
+  md += `\n\n## Recetas ilustradas (${names.length})\n\n${output.join('\n\n')}\n`;
+  write(target, md);
+  console.log(`El Completo: ${collection} => ${names.length} tarjetas con miniaturas`);
+}
