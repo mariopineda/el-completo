@@ -7,4 +7,4 @@ draft: false
 
 Nuestras favoritas de la casa.
 
-- [[Aliño para ensalada de Verónica]]
+- [[Aliño para ensalada de Media Naranja]]

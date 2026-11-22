@@ -1,6 +1,6 @@
 ---
-title: Aliño para ensalada de Verónica
-description: 'Receta importada de Paprika para revisar y cocinar: aliño para ensalada de verónica.'
+title: Aliño para ensalada de Media Naranja
+description: 'Receta importada de Paprika para revisar y cocinar: aliño para ensalada de media naranja.'
 tipo: receta
 estado: por-probar
 categoria: Salsas y aderezos
@@ -12,7 +12,7 @@ preparacion_min: null
 coccion_min: null
 version: '1.0'
 favorita: true
-foto: '03 - Recursos/Fotografías/Ilustraciones IA/alino-para-ensalada-de-veronica-ilustracion.webp'
+foto: '03 - Recursos/Fotografías/Ilustraciones IA/alino-para-ensalada-de-media-naranja-ilustracion.webp'
 foto_pendiente: true
 imagen_importada: false
 derechos_imagen: ilustracion-ia
@@ -61,7 +61,7 @@ nutricion:
     folato_mcg: null
   clasificaciones_verificadas: []
 ---
-# Aliño para ensalada de Verónica
+# Aliño para ensalada de Media Naranja
 
 > [!info] Antes de empezar
 > **Porciones:** por verificar · **Preparación:** por verificar · **Cocción:** por verificar
@@ -85,7 +85,7 @@ nutricion:
 
 ## Fotografía
 
-![[alino-para-ensalada-de-veronica-ilustracion.webp]]
+![[alino-para-ensalada-de-media-naranja-ilustracion.webp]]
 
 ## Información nutricional
 

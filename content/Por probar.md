@@ -7,7 +7,7 @@ draft: false
 
 Recetas que todavía estamos probando y mejorando.
 
-- [[Aliño para ensalada de Verónica]]
+- [[Aliño para ensalada de Media Naranja]]
 - [[Avena remojada de la noche anterior]]
 - [[Avena remojada estilo Buff Dudes — apunte]]
 - [[Avena remojada vegana — apunte]]
