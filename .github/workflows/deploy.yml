@@ -33,6 +33,8 @@ jobs:
         run: node scripts/generar-recetas-recientes.mjs
       - name: Preparar contadores y fichas de recetas
         run: node scripts/preparar-interfaz-recetas.mjs
+      - name: Simplificar presentacion de recetas
+        run: node scripts/simplificar-recetas-el-completo.mjs
       - name: Generar el sitio
         run: npx quartz build
       - name: Evitar indexacion en buscadores
