@@ -7,7 +7,7 @@ categoria: Ensaladas y acompañamientos
 tags:
 - paprika
 - ensaladas-y-acompanamientos
-porciones: null
+porciones: 4
 preparacion_min: null
 coccion_min: null
 version: '1.0'
@@ -19,7 +19,7 @@ derechos_imagen: ilustracion-ia
 revision_pendiente: true
 alertas_de_importacion: 0
 fecha_de_ingreso: '2026-11-21'
-ultima_preparacion: null
+ultima_preparacion: '2026-11-22'
 draft: false
 tipo_imagen: ilustracion-ia
 nutricion:
@@ -28,10 +28,10 @@ nutricion:
   fecha_calculo: null
   fuentes: []
   metodo: null
-  porcion_descripcion: "Por definir"
+  porcion_descripcion: "1 de 4 porciones (peso no medido)"
   porcion_peso_g: null
   rendimiento_total_g: null
-  porciones: null
+  porciones: 4
   incluye_acompanamientos: false
   valores_por_porcion:
     energia_kcal: null
@@ -64,7 +64,7 @@ nutricion:
 # Ensalada mediterránea de lentejas
 
 > [!info] Antes de empezar
-> **Porciones:** por verificar · **Preparación:** por verificar · **Cocción:** por verificar
+> **Porciones:** 4 · **Preparación:** por verificar · **Cocción:** por verificar
 > **Estado:** por probar · **Versión:** 1.0 · **Revisión:** pendiente
 
 ## Revisión pendiente
@@ -178,29 +178,19 @@ Refrigera **20–30 minutos** antes de servir.
 
 ## Pendiente para la próxima preparación
 
-> [!warning] Completar durante la próxima preparación
-> Anotar estas mediciones para calcular valores nutricionales confiables. **No modificar cantidades originales sin comprobarlas.**
+**Confirmado al prepararla el 22-11-2026:** rinde 4 porciones; se usaron las cantidades indicadas, incluyendo el queso feta, sal y pimienta. El aliño quedó equilibrado y no fueron necesarios ajustes.
 
-- [ ] Definir cuántas porciones reales rinde esta receta y qué cantidad se considera una porción.
-- [ ] Pesar el rendimiento final comestible (g o mL) y una porción representativa; registrar pérdidas por cocción cuando corresponda.
-- [ ] Confirmar qué ingredientes opcionales se usaron y en qué cantidad; definir si se incluyen en la porción nutricional.
-- [ ] Opcional sin confirmar: ¼ taza de queso feta desmenuzado (opcional)
-- [ ] Opcional sin confirmar: Sal y pimienta negra a gusto
-- [ ] Confirmar el peso real (g) de los siguientes ingredientes antes de calcular la nutrición:
-- [ ] Medir: 2½ tazas de lentejas verdes o pardas en conserva, escurridas y enjuagadas
-- [ ] Medir: 1 taza de tomates cherry cortados por la mitad
-- [ ] Medir: ¼ taza de perejil fresco picado
-- [ ] Medir: ½ taza de aceitunas Kalamata sin carozo y partidas
-- [ ] Medir: 3 cucharadas de aceite de oliva
-- [ ] Medir: 2 cucharadas de jugo de limón
-- [ ] Revisar también los otros 2 ingredientes con medidas caseras.
-- [ ] Anotar marcas y etiquetas nutricionales de alimentos envasados; confirmar agua, sal y aceite utilizados.
+**Datos aún pendientes para calcular nutrición verificable:**
 
+- [ ] Pesar el rendimiento total de la ensalada y una porción representativa.
+- [ ] Registrar el peso escurrido de las lentejas usadas; se confirmó el volumen de 2½ tazas, no el peso.
+- [ ] Registrar marcas y tablas nutricionales de lentejas, aceitunas y queso feta.
+- [ ] Verificar con el original de Paprika la traducción, las instrucciones y los derechos de la imagen, si corresponde.
 ## Observaciones y mejoras
 
 ### Lo que funcionó
 
-- Sin observaciones todavía.
+- **22-11-2026:** el aliño estuvo equilibrado; no fue necesario modificar ingredientes ni cantidades.
 
 ### Cambios incorporados a la receta
 
@@ -213,3 +203,11 @@ Refrigera **20–30 minutos** antes de servir.
 ## Historial de preparaciones
 
 > Agrega aquí un registro de la registro de cocina después de cocinar.
+
+### 22-11-2026 — Primera preparación registrada <!-- REGISTRO-COCINA-2026-11-22 -->
+
+- **Rendimiento:** 4 porciones.
+- **Cantidades:** se siguió la receta tal como está escrita, incluyendo los volúmenes indicados. No se pesaron las lentejas.
+- **Ingredientes opcionales y condimentos:** se utilizó queso feta, sal y pimienta.
+- **Resultado:** aliño equilibrado; no se hicieron ajustes.
+- **Pendiente:** peso final, peso de cada porción, peso escurrido de lentejas y marcas de productos.
