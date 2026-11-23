@@ -58,3 +58,4 @@ Recetas que todavía estamos probando y mejorando.
 - [[Sopa de porotos negros en olla lenta]]
 - [[Sopa tailandesa de fideos con curry rojo]]
 - [[Sopa sueca de puerros y papas]]
+- [[Desayuno de skyr con avena, chía, frutos rojos y mantequilla de maní]]
